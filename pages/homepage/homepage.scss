@@ -1,2 +1,50 @@
 @import "../../styles/layouts/_header";
 @import "../../styles/layouts/complemantary-class";
+@import "../../styles/base/typography";
+@import "../../styles/abstracts/variables";
+
+.location {
+  background-color: $grey;
+
+  i {
+    position: absolute;
+    width: 165px;
+  }
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.reserve-menu {
+  background-color: $light-grey;
+  height: 200px;
+  padding: 15% 5%;
+
+  h1 {
+    width: 90%;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    background-image: linear-gradient($secondary, $primmary);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  button:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+/*
+background: whitesmoke;
+*/

@@ -1,24 +1,32 @@
 header {
-  background-color: white;
-  padding: 30px;
+  position: relative;
+  padding: 15px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 
   nav {
-    position: absolute;
-    left: 5%;
+    display: none;
   }
 
   img {
-    width: 70%;
     max-width: 392px;
   }
 
-
   @media screen and (max-width: 992px) {
-    background-color: red;
+
   }
 
   @media screen and (max-width: 768px) {
-    background-color: blue;
+
+    nav {
+      display: initial;
+      position: absolute;
+      left: 5%;
+    }
+
+    img {
+      width: 45%;
+    }
+
   }
 }
 
