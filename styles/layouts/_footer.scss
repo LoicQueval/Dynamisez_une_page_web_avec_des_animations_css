@@ -1,0 +1,30 @@
+@import "../abstracts/variables";
+
+footer {
+  background-color: $dark-grey;
+  padding: 5% 5%;
+  color: white;
+
+  h2 {
+    margin: 10px 0 25px 0;
+    font-size: 20px;
+  }
+
+  div {
+    margin: 10px 0;
+
+    i {
+      width: 14px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+}
