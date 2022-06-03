@@ -4,6 +4,10 @@
 @import "../../styles/base/typography";
 @import "../../styles/abstracts/variables";
 
+body {
+  height: 100%;
+}
+
 .location {
   background-color: $grey;
 
@@ -40,7 +44,7 @@
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   }
 
-  button:hover {
+  a:hover {
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
   }
 }
@@ -92,6 +96,7 @@
     height: 100%;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
 
     img {
       object-fit: cover;
@@ -112,5 +117,9 @@
         font-weight: bold;
       }
     }
+  }
+
+  a:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
   }
 }

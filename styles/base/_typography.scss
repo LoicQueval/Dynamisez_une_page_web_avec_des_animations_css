@@ -2,10 +2,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-section {
-  padding: 5% 5%;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
@@ -16,12 +12,11 @@ h1 {
   margin: 0;
 }
 
+section {
+  padding: 5% 5%;
+}
+
 a {
   text-decoration: none;
   color: black;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-}
-
-a:hover {
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 }
