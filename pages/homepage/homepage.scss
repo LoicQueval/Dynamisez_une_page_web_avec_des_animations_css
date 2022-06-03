@@ -1,20 +1,11 @@
-@import "../../styles/base/typography";
-@import "../../styles/layouts/complemantary-class";
 @import "../../styles/abstracts/variables";
+@import "../../styles/base/typography";
 @import "../../styles/layouts/header";
 @import "../../styles/layouts/footer";
-
-body {
-  height: 100%;
-}
+@import "../../styles/layouts/complemantary-class";
 
 .location {
   background-color: $grey;
-
-  i {
-    position: absolute;
-    width: 165px;
-  }
 
   p {
     font-weight: bold;
