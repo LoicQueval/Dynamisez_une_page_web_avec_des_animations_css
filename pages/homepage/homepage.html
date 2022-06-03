@@ -15,37 +15,43 @@
 </header>
 
 <main>
-
-    <div class="flex align-items--center justify-content--center gap--20px location">
-        <i class="fa-solid fa-location-dot"></i>
+    <div class="flex align-items--center justify-content--center localization">
+        <i class="fa-solid fa-location-dot fa-sm"></i>
         <p>Paris, Belleville</p>
     </div>
 
     <section class="flex flex-direction--column align-items--center text-align--center reserve-menu">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#restaurant">Explorer nos restaurants</a>
+        <form action="#restaurant">
+            <button type="submit">
+                Explorer nos restaurants
+            </button>
+        </form>
     </section>
 
-    <section>
+    <section class="flex flex-direction--column gap--30px">
         <h2>Fonctionnement</h2>
-        <div class="flex flex-direction--column gap--20px">
+
+        <div class="flex justify-content--center flex-wrap--wrap gap--25px">
             <div class="flex align-items--center steps">
-                <span class="numbers">1</span>
+                <span>1</span>
                 <div class="flex align-items--center gap--20px">
                     <i class="fa-solid fa-mobile-screen-button"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
             </div>
+
             <div class="flex align-items--center steps">
-                <span class="numbers">2</span>
+                <span>2</span>
                 <div class="flex align-items--center gap--20px">
                     <i class="fa-solid fa-list"></i>
                     <p>Composez votre menu</p>
                 </div>
             </div>
+
             <div class="flex align-items--center steps">
-                <span class="numbers">3</span>
+                <span>3</span>
                 <div class="flex align-items--center gap--20px">
                     <i class="fa-solid fa-store"></i>
                     <p>Dégustez au restaurant</p>
@@ -54,9 +60,10 @@
         </div>
     </section>
 
-    <section id="restaurant" class="restaurants">
+    <section id="restaurant" class="flex flex-direction--column gap--30px restaurants">
         <h2>Restaurants</h2>
-        <div class="flex flex-direction--column gap--20px">
+
+        <div class="flex justify-content--center flex-wrap--wrap gap--25px">
             <a href="../menus/the-taste-palette.html">
                 <img src="../../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                      alt="La_palette_du_goût">
