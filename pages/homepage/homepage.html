@@ -23,14 +23,13 @@
     <section class="flex flex-direction--column align-items--center text-align--center reserve-menu">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <form action="#restaurant">
-            <button type="submit">
-                Explorer nos restaurants
-            </button>
-        </form>
+        <button type="button" onclick="location.href='#restaurant'">
+            Explorer nos restaurants
+        </button>
     </section>
 
-    <section class="flex flex-direction--column gap--30px">
+
+    <section class="flex flex-direction--column gap--30px functioning">
         <h2>Fonctionnement</h2>
 
         <div class="flex justify-content--center flex-wrap--wrap gap--25px">
@@ -96,18 +95,26 @@
             </a>
         </div>
     </section>
+
 </main>
+
 <footer>
     <h2>ohmyfood</h2>
-    <div class="flex align-items--center gap--15px">
-        <i class="fa-solid fa-utensils"></i>
-        <p>Proposer un restaurant</p>
+    <div class="flex flex-direction--column">
+        <div class="flex align-items--center gap--15px">
+            <i class="fa-solid fa-utensils"></i>
+            <p>Proposer un restaurant</p>
+        </div>
+        <div class="flex align-items--center gap--15px">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <p>Devenir partenaire</p>
+        </div>
     </div>
-    <div class="flex align-items--center gap--15px">
-        <i class="fa-solid fa-handshake-angle"></i>
-        <p>Devenir partenaire</p>
+    <div class="flex flex-direction--column">
+        <p>Mentions légales</p>
+        <p>Contact</p>
     </div>
-    <p>Mentions légales</p>
-    <p>Contact</p>
 </footer>
+
 </body>
+</html>
