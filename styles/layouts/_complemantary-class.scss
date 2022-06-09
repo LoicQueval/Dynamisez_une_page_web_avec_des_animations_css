@@ -9,16 +9,16 @@
     justify-content: center;
   }
 
+  &.justify-content--space-between {
+    justify-content: space-between;
+  }
+
   &.flex-direction--column {
     flex-direction: column;
   }
 
   &.flex-wrap--wrap {
     flex-wrap: wrap;
-  }
-
-  &.gap--30px {
-    gap: 30px;
   }
 
   &.gap--25px {

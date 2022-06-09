@@ -1,18 +1,13 @@
 @import "../abstracts/variables";
 
 footer {
-  position: relative;
   background-color: $dark-grey;
   color: white;
+  position: relative;
   padding: 20px 5%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    align-items: normal;
   }
 
   h2 {
