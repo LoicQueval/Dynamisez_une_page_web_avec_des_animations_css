@@ -3,40 +3,108 @@
 @import "../../styles/layouts/header";
 @import "../../styles/layouts/footer";
 @import "../../styles/layouts/complemantary-class";
+@import "../../styles/components/button";
 
 img {
   object-fit: cover;
   width: 100%;
+  max-height: 300px;
 }
 
 section {
-  width: 90%;
-  background-color: $grey;
+  background-color: $light-grey;
   position: relative;
-  margin-top: -20px;
+  margin-top: -30px;
   border-radius: 30px 30px 0 0;
 
-  div a {
-    background-color: white;
-    border-radius: 25px;
-    padding: 0 5%;
+  .title {
+    margin-bottom: 25px;
+    margin-top: -20px;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    i {
+      padding-right: 20px;
+    }
   }
 
-  .b {
-    padding: 50px;
+  .menu {
+    margin-top: -10px;
 
-    .a {
-      padding: 20px;
-      border: none;
-      border-radius: 30px;
-      background-image: linear-gradient($pink, $purple);
-      color: white;
-      font-weight: bold;
+    p {
+      width: 40px;
+      border-bottom: 3px solid #92d9a0;
+      padding-bottom: 5px;
+      margin-bottom: 0;
+      position: relative;
+      opacity: 0;
+      animation: progressive-loading 0.5s forwards;
+    }
+
+    a {
+      background-color: white;
+      border-radius: 15px;
       box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+      position: relative;
+      opacity: 0;
+      animation: progressive-loading 0.5s forwards;
+
+      .dish {
+        padding: 10px 15px;
+        width: 100%;
+
+        h3 {
+          margin: 0;
+          padding-bottom: 5px;
+          font-size: 15px;
+        }
+
+        p {
+          width: initial;
+          border: none;
+          margin: 0;
+          font-size: 13px;
+        }
+
+        .price {
+          padding-right: 5px;
+          font-weight: bold;
+        }
+      }
+
+      .check {
+        width: 75px;
+        background-color: $light-green;
+        border-radius: 0 10px 10px 0;
+
+        i {
+          color: white;
+        }
+      }
     }
 
-    .a:hover {
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+
+    @for $i from 1 through 12 {
+      a:nth-child(#{$i}), p:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+      }
     }
+
+    a:nth-child(2):hover {
+      background-color: red;
+    }
+
+  }
+}
+
+@keyframes progressive-loading {
+  0% {
+    top: 15px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
   }
 }
