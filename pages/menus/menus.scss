@@ -41,15 +41,36 @@ section {
       position: relative;
       opacity: 0;
       animation: progressive-loading 0.5s forwards;
+
+      @for $i from 0 through 2 {
+
+        &:nth-child(#{$i * 3 + $i + 1}) {
+          animation-delay: #{$i * 0.4 + 0.1}s;
+        }
+      }
     }
 
     a {
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-      position: relative;
       opacity: 0;
       animation: progressive-loading 0.5s forwards;
+
+      @for $i from 1 through 3 {
+
+        &:nth-child(#{$i+1}) {
+          animation-delay: #{$i * 0.1 + 0.1}s;
+        }
+
+        &:nth-child(#{$i+5}) {
+          animation-delay: #{$i * 0.1 + 0.5}s;
+        }
+
+        &:nth-child(#{$i+9}) {
+          animation-delay: #{$i * 0.1 + 0.9}s;
+        }
+      }
 
       .dish {
         padding: 10px 15px;
@@ -75,27 +96,42 @@ section {
       }
 
       .check {
-        width: 75px;
-        background-color: $light-green;
-        border-radius: 0 10px 10px 0;
+
+        &:hover {
+          animation: slide-box 0.5s forwards;
+          background-color: $light-green;
+          border-radius: 0 10px 10px 0;
+        }
 
         i {
           color: white;
+
+          &:hover {
+            animation: check-rotate 0.5s;
+          }
         }
       }
     }
 
 
-    @for $i from 1 through 12 {
-      a:nth-child(#{$i}), p:nth-child(#{$i}) {
-        animation-delay: #{$i * 0.1}s;
-      }
-    }
+  }
+}
 
-    a:nth-child(2):hover {
-      background-color: red;
-    }
+@keyframes slide-box {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75px;
+  }
+}
 
+@keyframes check-rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
