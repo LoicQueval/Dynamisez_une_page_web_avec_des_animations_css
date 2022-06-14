@@ -33,15 +33,16 @@ footer {
         width: 14px;
       }
 
-      p {
+      a {
         margin: 0;
         font-weight: bold;
       }
     }
 
-    p {
+    a {
       margin: 5px 0;
       font-weight: bold;
+      color:white;
 
       @media screen and (max-width: 768px) {
         font-weight: normal;
