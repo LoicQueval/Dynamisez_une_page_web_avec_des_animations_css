@@ -10,10 +10,11 @@
 
   .fa-gear {
     position: relative;
-    padding: 40px 0;
-    font-size: 705px;
+    margin: 5%;
+    font-size: 3700%;
+    color: $cyan;
     animation: loading-spinner 3s linear forwards;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       font-size: 400px;
     }
   }
@@ -21,6 +22,8 @@
 
 main {
   position: absolute;
+  left: -999px;
+  top: -999px;
   opacity: 0;
   animation: opacity 3s forwards;
 
@@ -237,14 +240,20 @@ main {
 }
 
 @keyframes opacity {
-  0% {
+  98% {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    opacity: 0;
   }
   99% {
-    opacity: 0;
-    position: absolute;
+    left: 0;
+    top: -500px;
   }
   100% {
     opacity: 1;
+    left: 0;
+    top: 0;
     position: relative;
   }
 }
