@@ -42,10 +42,10 @@ section {
       opacity: 0;
       animation: progressive-loading 0.5s forwards;
 
-      @for $i from 0 through 2 {
+      @for $i from 1 through 13 {
 
         &:nth-child(#{$i * 3 + $i + 1}) {
-          animation-delay: #{$i * 0.4 + 0.1}s;
+          animation-delay: #{$i * 0.1}s;
         }
       }
     }
@@ -57,18 +57,10 @@ section {
       opacity: 0;
       animation: progressive-loading 0.5s forwards;
 
-      @for $i from 1 through 3 {
+      @for $i from 1 through 13 {
 
-        &:nth-child(#{$i+1}) {
-          animation-delay: #{$i * 0.1 + 0.1}s;
-        }
-
-        &:nth-child(#{$i+5}) {
-          animation-delay: #{$i * 0.1 + 0.5}s;
-        }
-
-        &:nth-child(#{$i+9}) {
-          animation-delay: #{$i * 0.1 + 0.9}s;
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i+1) * 0.1}s;
         }
       }
 
@@ -96,17 +88,20 @@ section {
       }
 
       .check {
+        i {
+          color: white;
+        }
+      }
 
-        &:hover {
+      &:hover {
+
+        .check {
           animation: slide-box 0.5s forwards;
           background-color: $light-green;
           border-radius: 0 10px 10px 0;
-        }
 
-        i {
-          color: white;
-
-          &:hover {
+          i {
+            color: white;
             animation: check-rotate 0.5s;
           }
         }

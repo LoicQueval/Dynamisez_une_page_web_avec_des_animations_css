@@ -5,164 +5,247 @@
 @import "../../styles/layouts/complemantary-class";
 @import "../../styles/components/button";
 
-.localization {
-  background-color: $grey;
-  padding: 15px;
+.loading-spinner {
+  width: 100%;
 
-  i {
-    position: absolute;
-    width: 200px;
+  .fa-gear {
+    position: relative;
+    padding: 40px 0;
+    font-size: 705px;
+    animation: loading-spinner 3s linear forwards;
     @media screen and (max-width: 768px) {
-      width: 175px;
-    }
-  }
-
-  p {
-    margin: 0;
-    font-weight: bold;
-
-    @media screen and (max-width: 768px) {
-      font-size: 14px;
+      font-size: 400px;
     }
   }
 }
 
-.reserve-menu {
-  background-color: $light-grey;
-  padding: 40px 5% 60px 5%;
+main {
+  position: absolute;
+  opacity: 0;
+  animation: opacity 3s forwards;
 
-  p {
-    max-width: 325px;
-    font-size: 19px;
-  }
-}
+  .localization {
+    background-color: $grey;
+    padding: 15px;
 
-.functioning {
-  align-items: center;
-  gap: 40px;
-
-  @media screen and (max-width: 768px) {
-    align-items: normal;
-    gap: 30px;
-  }
-
-  h2 {
-    font-size: 30px;
-
-    @media screen and (max-width: 768px) {
-      font-size: 23px;
+    i {
+      position: absolute;
+      width: 200px;
+      @media screen and (max-width: 768px) {
+        width: 175px;
+      }
     }
-  }
 
-  .layout {
-    max-width: 710px;
-
-    .step {
-      width: 338px;
-      padding-bottom: 10px;
+    p {
+      margin: 0;
+      font-weight: bold;
 
       @media screen and (max-width: 768px) {
-        padding-bottom: 0;
-      }
-
-      .number {
-        position: absolute;
-        background-color: $purple;
-        border-radius: 15px;
-        color: white;
-        font-weight: bold;
-        font-size: 12px;
-        padding: 3px 6px;
-      }
-
-      .layout {
-        padding-left: 30px;
-        margin-left: 10px;
-        background-color: $light-grey;
-        border-radius: 25px;
-        height: 65px;
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-        width: 100%;
-
-        i {
-          color: grey;
-        }
-
-        p {
-          font-weight: bold;
-        }
-      }
-
-      .layout:hover {
-        background-color: $light-purple;
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
-
-        i {
-          color: $purple;
-        }
+        font-size: 14px;
       }
     }
   }
-}
 
-.restaurants {
-  background-color: $light-grey;
-  align-items: center;
-  gap: 40px;
+  .reserve-menu {
+    background-color: $light-grey;
+    padding: 40px 5% 60px 5%;
 
-  @media screen and (max-width: 768px) {
-    align-items: normal;
-    gap: 30px;
+    p {
+      max-width: 325px;
+      font-size: 19px;
+    }
   }
 
-  h2 {
-    font-size: 30px;
+  .functioning {
+    align-items: center;
+    gap: 40px;
 
     @media screen and (max-width: 768px) {
-      font-size: 23px;
+      align-items: normal;
+      gap: 30px;
     }
-  }
 
-  .layout {
-    max-width: 1060px;
+    h2 {
+      font-size: 30px;
 
-    .menu {
-      width: 338px;
-      display: inline-block;
-      background-color: white;
-      border-radius: 20px 20px 20px 20px;
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-      position: relative;
-
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 160px;
-        border-radius: 20px 20px 0 0;
+      @media screen and (max-width: 768px) {
+        font-size: 23px;
       }
+    }
 
-      .notification {
-        position: absolute;
-        top: 0;
-        left: 225px;
-        font-weight: bold;
-        padding: 5px 15px;
-        background-color: $light-green;
-        color: $green;
-      }
+    .layout {
+      max-width: 710px;
 
-      .body {
-        padding: 2.5% 5%;
+      .step {
+        width: 338px;
+        padding-bottom: 10px;
 
-        h3, p {
-          padding: 2% 0;
-          margin: 0;
+        @media screen and (max-width: 768px) {
+          padding-bottom: 0;
+        }
+
+        .number {
+          position: absolute;
+          background-color: $purple;
+          border-radius: 15px;
+          color: white;
+          font-weight: bold;
+          font-size: 12px;
+          padding: 3px 6px;
+        }
+
+        .layout {
+          padding-left: 30px;
+          margin-left: 10px;
+          background-color: $light-grey;
+          border-radius: 25px;
+          height: 65px;
+          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+          width: 100%;
+
+          &:hover {
+            background-color: $light-purple;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+
+            i {
+              color: $purple;
+            }
+          }
+
+          i {
+            color: grey;
+          }
+
+          p {
+            font-weight: bold;
+          }
+
         }
       }
     }
+  }
 
-    .menu:hover {
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+  .restaurants {
+    background-color: $light-grey;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      align-items: normal;
+      gap: 30px;
+    }
+
+    h2 {
+      font-size: 30px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 23px;
+      }
+    }
+
+    .layout {
+      max-width: 1060px;
+
+      .menu {
+        width: 338px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 160px;
+          border-radius: 20px 20px 0 0;
+        }
+
+        .notification {
+          position: absolute;
+          top: 0;
+          left: 225px;
+          font-weight: bold;
+          padding: 5px 15px;
+          background-color: $light-green;
+          color: $green;
+        }
+
+        .body {
+          padding: 2.5% 5%;
+
+          h3, p {
+            padding: 2% 0;
+            margin: 0;
+          }
+
+          .heart {
+            position: relative;
+            width: 15px;
+
+            &:hover {
+              .fa-solid {
+                z-index: 1;
+                animation: hearth 1s forwards;
+              }
+            }
+
+            .fa-regular {
+              position: absolute;
+            }
+
+            .fa-solid {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .menu:hover {
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+      }
     }
   }
 }
+
+@keyframes hearth {
+  0% {
+    font-size: xx-small;
+    color: white;
+  }
+  100% {
+    font-size: x-large;
+    color: $purple;
+  }
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  99% {
+    opacity: 1;
+    position: relative;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(540deg);
+    position: absolute;
+    top: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+  }
+  99% {
+    opacity: 0;
+    position: absolute;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+  }
+}
+
