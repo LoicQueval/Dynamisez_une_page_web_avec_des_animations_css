@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+.heart {
+  position: relative;
+  width: 15px;
+
+  &:hover {
+    .fa-solid {
+      z-index: 1;
+      animation: hearth 1s forwards;
+    }
+  }
+
+  .fa-regular {
+    position: absolute;
+  }
+}
+
+@keyframes hearth {
+  0% {
+    font-size: xx-small;
+    color: white;
+  }
+  100% {
+    font-size: x-large;
+    color: $purple;
+  }
+}

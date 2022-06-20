@@ -1,5 +1,9 @@
 @import "../abstracts/fonts";
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }

@@ -1,9 +1,11 @@
+@import "../../styles/_vendor/normalize";
 @import "../../styles/abstracts/variables";
 @import "../../styles/base/typography";
 @import "../../styles/layouts/header";
 @import "../../styles/layouts/footer";
 @import "../../styles/layouts/complemantary-class";
 @import "../../styles/components/button";
+@import "../../styles/components/heart";
 
 img {
   object-fit: cover;
@@ -28,6 +30,10 @@ section {
     i {
       padding-right: 20px;
     }
+
+    .fa-solid {
+      color: $light-grey;
+    }
   }
 
   .menu {
@@ -50,7 +56,18 @@ section {
       }
     }
 
+    @keyframes progressive-loading {
+      0% {
+        top: 15px;
+      }
+      100% {
+        opacity: 1;
+        top: 0;
+      }
+    }
+
     a {
+      width: 315px;
       background-color: white;
       border-radius: 15px;
       box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
@@ -81,6 +98,13 @@ section {
           font-size: 13px;
         }
 
+        .overflow {
+          width: 220px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
         .price {
           padding-right: 5px;
           font-weight: bold;
@@ -93,49 +117,46 @@ section {
         }
       }
 
+
       &:hover {
+
+        .overflow, h3 {
+          width: 185px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
         .check {
           animation: slide-box 0.5s forwards;
           background-color: $light-green;
           border-radius: 0 10px 10px 0;
 
+          @keyframes slide-box {
+            0% {
+              width: 0;
+            }
+            100% {
+              width: 75px;
+            }
+          }
+
           i {
             color: white;
             animation: check-rotate 0.5s;
           }
+
+          @keyframes check-rotate {
+            0% {
+              transform: rotate(180deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
         }
       }
     }
-
-
   }
 }
 
-@keyframes slide-box {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 75px;
-  }
-}
-
-@keyframes check-rotate {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes progressive-loading {
-  0% {
-    top: 15px;
-  }
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}

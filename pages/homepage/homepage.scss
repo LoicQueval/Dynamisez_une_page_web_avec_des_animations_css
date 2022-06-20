@@ -1,260 +1,175 @@
+@import "../../styles/_vendor/normalize";
 @import "../../styles/abstracts/variables";
 @import "../../styles/base/typography";
 @import "../../styles/layouts/header";
 @import "../../styles/layouts/footer";
 @import "../../styles/layouts/complemantary-class";
 @import "../../styles/components/button";
+@import "../../styles/components/_loading-spinner.scss";
+@import "../../styles/components/heart";
 
-.loading-spinner {
-  width: 100%;
+.localization {
+  background-color: $grey;
+  padding: 15px;
 
-  .fa-gear {
-    position: relative;
-    margin: 5%;
-    font-size: 3700%;
-    color: $cyan;
-    animation: loading-spinner 3s linear forwards;
-    @media screen and (max-width: 992px) {
-      font-size: 400px;
+  i {
+    position: absolute;
+    width: 200px;
+    @media screen and (max-width: 768px) {
+      width: 175px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
     }
   }
 }
 
-main {
-  position: absolute;
-  left: -999px;
-  top: -999px;
-  opacity: 0;
-  animation: opacity 3s forwards;
+.reserve-menu {
+  background-color: $light-grey;
+  padding: 40px 5% 60px 5%;
 
-  .localization {
-    background-color: $grey;
-    padding: 15px;
+  p {
+    max-width: 325px;
+    font-size: 19px;
+  }
+}
 
-    i {
-      position: absolute;
-      width: 200px;
-      @media screen and (max-width: 768px) {
-        width: 175px;
-      }
-    }
+.functioning {
+  align-items: center;
+  gap: 40px;
 
-    p {
-      margin: 0;
-      font-weight: bold;
-
-      @media screen and (max-width: 768px) {
-        font-size: 14px;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    align-items: normal;
+    gap: 30px;
   }
 
-  .reserve-menu {
-    background-color: $light-grey;
-    padding: 40px 5% 60px 5%;
-
-    p {
-      max-width: 325px;
-      font-size: 19px;
-    }
-  }
-
-  .functioning {
-    align-items: center;
-    gap: 40px;
+  h2 {
+    font-size: 30px;
 
     @media screen and (max-width: 768px) {
-      align-items: normal;
-      gap: 30px;
+      font-size: 23px;
     }
+  }
 
-    h2 {
-      font-size: 30px;
+  .layout {
+    max-width: 710px;
+
+    .step {
+      width: 338px;
+      padding-bottom: 10px;
 
       @media screen and (max-width: 768px) {
-        font-size: 23px;
+        padding-bottom: 0;
       }
-    }
 
-    .layout {
-      max-width: 710px;
+      .number {
+        position: absolute;
+        background-color: $purple;
+        border-radius: 15px;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 3px 6px;
+      }
 
-      .step {
-        width: 338px;
-        padding-bottom: 10px;
+      .layout {
+        padding-left: 30px;
+        margin-left: 10px;
+        background-color: $light-grey;
+        border-radius: 25px;
+        height: 65px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+        width: 100%;
 
-        @media screen and (max-width: 768px) {
-          padding-bottom: 0;
-        }
-
-        .number {
-          position: absolute;
-          background-color: $purple;
-          border-radius: 15px;
-          color: white;
-          font-weight: bold;
-          font-size: 12px;
-          padding: 3px 6px;
-        }
-
-        .layout {
-          padding-left: 30px;
-          margin-left: 10px;
-          background-color: $light-grey;
-          border-radius: 25px;
-          height: 65px;
-          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-          width: 100%;
-
-          &:hover {
-            background-color: $light-purple;
-            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
-
-            i {
-              color: $purple;
-            }
-          }
+        &:hover {
+          background-color: $light-purple;
+          box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 
           i {
-            color: grey;
+            color: $purple;
           }
+        }
 
-          p {
-            font-weight: bold;
-          }
+        i {
+          color: grey;
+        }
 
+        p {
+          font-weight: bold;
         }
       }
     }
   }
+}
 
-  .restaurants {
-    background-color: $light-grey;
-    align-items: center;
-    gap: 40px;
+.restaurants {
+  background-color: $light-grey;
+  align-items: center;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    align-items: normal;
+    gap: 30px;
+  }
+
+  h2 {
+    font-size: 30px;
 
     @media screen and (max-width: 768px) {
-      align-items: normal;
-      gap: 30px;
+      font-size: 23px;
+    }
+  }
+
+  .layout {
+    max-width: 1060px;
+
+    .menu {
+      width: 338px;
+      display: inline-block;
+      background-color: white;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+      position: relative;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 160px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .notification {
+        position: absolute;
+        top: 0;
+        left: 225px;
+        font-weight: bold;
+        padding: 5px 15px;
+        background-color: $light-green;
+        color: $green;
+      }
+
+      .body {
+        padding: 2.5% 5%;
+
+        .fa-solid {
+          color: white;
+        }
+
+        h3, p {
+          padding: 2% 0;
+          margin: 0;
+        }
+      }
     }
 
-    h2 {
-      font-size: 30px;
-
-      @media screen and (max-width: 768px) {
-        font-size: 23px;
-      }
-    }
-
-    .layout {
-      max-width: 1060px;
-
-      .menu {
-        width: 338px;
-        display: inline-block;
-        background-color: white;
-        border-radius: 20px 20px 20px 20px;
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-        position: relative;
-
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 160px;
-          border-radius: 20px 20px 0 0;
-        }
-
-        .notification {
-          position: absolute;
-          top: 0;
-          left: 225px;
-          font-weight: bold;
-          padding: 5px 15px;
-          background-color: $light-green;
-          color: $green;
-        }
-
-        .body {
-          padding: 2.5% 5%;
-
-          h3, p {
-            padding: 2% 0;
-            margin: 0;
-          }
-
-          .heart {
-            position: relative;
-            width: 15px;
-
-            &:hover {
-              .fa-solid {
-                z-index: 1;
-                animation: hearth 1s forwards;
-              }
-            }
-
-            .fa-regular {
-              position: absolute;
-            }
-
-            .fa-solid {
-              color: white;
-            }
-          }
-        }
-      }
-
-      .menu:hover {
-        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
-      }
+    .menu:hover {
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
     }
   }
 }
-
-@keyframes hearth {
-  0% {
-    font-size: xx-small;
-    color: white;
-  }
-  100% {
-    font-size: x-large;
-    color: $purple;
-  }
-}
-
-@keyframes loading-spinner {
-  0% {
-    transform: rotate(0);
-  }
-
-  99% {
-    opacity: 1;
-    position: relative;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(540deg);
-    position: absolute;
-    top: 0;
-  }
-}
-
-@keyframes opacity {
-  98% {
-    position: absolute;
-    left: -999px;
-    top: -999px;
-    opacity: 0;
-  }
-  99% {
-    left: 0;
-    top: -500px;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-    top: 0;
-    position: relative;
-  }
-}
-
