@@ -20,6 +20,8 @@ section {
   border-radius: 30px 30px 0 0;
 
   .title {
+    width: 100%;
+    max-width: 1000px;
     margin-bottom: 25px;
     margin-top: -20px;
 
@@ -27,17 +29,18 @@ section {
       font-size: 25px;
     }
 
-    i {
+    .heart {
       padding-right: 20px;
-    }
 
-    .fa-solid {
-      color: $light-grey;
+      .fa-solid {
+        color: $light-grey;
+      }
     }
   }
 
   .menu {
     margin-top: -10px;
+    max-width: 1000px;
 
     p {
       width: 40px;
@@ -66,96 +69,103 @@ section {
       }
     }
 
-    a {
-      width: 315px;
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      animation: progressive-loading 0.5s forwards;
+    .categories {
+      justify-content: center;
 
-      @for $i from 1 through 13 {
+      a {
+        width: 315px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        animation: progressive-loading 0.5s forwards;
 
-        &:nth-child(#{$i}) {
-          animation-delay: #{($i+1) * 0.1}s;
-        }
-      }
+        @for $i from 1 through 13 {
 
-      .dish {
-        padding: 10px 15px;
-        width: 100%;
-
-        h3 {
-          margin: 0;
-          padding-bottom: 5px;
-          font-size: 15px;
+          &:nth-child(#{$i}) {
+            animation-delay: #{($i+1) * 0.1}s;
+          }
         }
 
-        p {
-          width: initial;
-          border: none;
-          margin: 0;
-          font-size: 13px;
-        }
+        .dish {
+          padding: 10px 15px;
+          width: 100%;
 
-        .overflow {
-          width: 220px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+          h3 {
+            margin: 0;
+            padding-bottom: 5px;
+            font-size: 15px;
+          }
 
-        .price {
-          padding-right: 5px;
-          font-weight: bold;
-        }
-      }
+          p {
+            width: initial;
+            border: none;
+            margin: 0;
+            font-size: 13px;
+          }
 
-      .check {
-        i {
-          color: white;
-        }
-      }
+          .overflow {
+            width: 220px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
-
-      &:hover {
-
-        .overflow, h3 {
-          width: 185px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          .price {
+            padding-right: 5px;
+            font-weight: bold;
+          }
         }
 
         .check {
-          animation: slide-box 0.5s forwards;
-          background-color: $light-green;
-          border-radius: 0 10px 10px 0;
-
-          @keyframes slide-box {
-            0% {
-              width: 0;
-            }
-            100% {
-              width: 75px;
-            }
-          }
-
           i {
             color: white;
-            animation: check-rotate 0.5s;
+          }
+        }
+
+        &:hover {
+
+          .overflow, h3 {
+            width: 185px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
 
-          @keyframes check-rotate {
-            0% {
-              transform: rotate(180deg);
+          .check {
+            animation: slide-box 0.5s forwards;
+            background-color: $light-green;
+            border-radius: 0 10px 10px 0;
+
+            @keyframes slide-box {
+              0% {
+                width: 0;
+              }
+              100% {
+                width: 75px;
+              }
             }
-            100% {
-              transform: rotate(360deg);
+
+            i {
+              color: white;
+              animation: check-rotate 0.5s;
+            }
+
+            @keyframes check-rotate {
+              0% {
+                transform: rotate(180deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
             }
           }
         }
       }
+    }
+
+    .button {
+      width: 100%;
     }
   }
 }
