@@ -1,9 +1,10 @@
 @import "../abstracts/variables";
 
 .loading-spinner {
-  animation: hiding 3s forwards;
+  animation: hiding 2s forwards;
+  height: 0;
+  width: 0;
   color: $cyan;
-  height: 82%;
   font-size: 400px;
   @media screen and (max-width: 768px) {
     height: 61%;
@@ -11,12 +12,12 @@
   }
 
   .fa-gear {
-    animation: loading-spinner 3s linear forwards;
+    animation: loading-spinner 2s linear forwards;
   }
 }
 
 @keyframes hiding {
-  99% {
+  50% {
     opacity: 1;
     position: relative;
   }
@@ -29,6 +30,8 @@
 @keyframes loading-spinner {
   0% {
     transform: rotate(0);
+    height: 82%;
+    width: 100%;
   }
 
   100% {
@@ -37,29 +40,20 @@
 }
 
 main {
-  position: absolute;
-  top: -999px;
-  left: -999px;
+  position: relative;
+  display: none;
   opacity: 0;
   animation: appear 3s forwards;
 }
 
 @keyframes appear {
-  98% {
+  0% {
+    display: block;
     opacity: 0;
-    position: absolute;
-    left: -999px;
-    top: -999px;
   }
-  99% {
-    left: 0;
-    top: -500px;
-  }
+
   100% {
     opacity: 1;
-    position: relative;
-    left: 0;
-    top: 0;
   }
 }
 
