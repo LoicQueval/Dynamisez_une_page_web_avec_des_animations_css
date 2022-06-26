@@ -1,7 +1,7 @@
 @import "../abstracts/variables";
 
 .loading-spinner {
-  animation: hiding 2s forwards;
+  animation: hiding 3s forwards;
   height: 0;
   width: 0;
   color: $cyan;
@@ -12,7 +12,7 @@
   }
 
   .fa-gear {
-    animation: loading-spinner 2s linear forwards;
+    animation: loading-spinner 3s linear forwards;
   }
 }
 
