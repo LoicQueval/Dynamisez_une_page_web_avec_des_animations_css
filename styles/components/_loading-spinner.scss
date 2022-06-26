@@ -1,7 +1,6 @@
 @import "../abstracts/variables";
 
 .loading-spinner {
-  animation: hiding 3s forwards;
   height: 0;
   width: 0;
   color: $cyan;
@@ -13,17 +12,6 @@
 
   .fa-gear {
     animation: loading-spinner 3s linear forwards;
-  }
-}
-
-@keyframes hiding {
-  0% {
-    opacity: 1;
-    position: relative;
-  }
-  100% {
-    opacity: 0;
-    position: absolute;
   }
 }
 
