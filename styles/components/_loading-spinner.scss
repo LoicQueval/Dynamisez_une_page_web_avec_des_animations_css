@@ -5,10 +5,6 @@
   width: 0;
   color: $cyan;
   font-size: 400px;
-  @media screen and (max-width: 768px) {
-    height: 61%;
-    font-size: 200px;
-  }
 
   .fa-gear {
     animation: loading-spinner 3s linear forwards;
